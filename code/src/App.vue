@@ -1,26 +1,23 @@
 <template>
-  <GameChallenge />
+  <BaseGameComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import GameChallenge from "./components/GameChallenge.vue";
+import BaseGameComponent from "./components/BaseGameComponent.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    GameChallenge,
+    BaseGameComponent,
   },
 });
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Barlow Semi Condensed", sans-serif;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
