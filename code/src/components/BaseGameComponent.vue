@@ -1,18 +1,22 @@
 <template>
-  <div>
-    <h1>Teste Novo Component</h1>
+  <div class="base">
+    <GameScoreComponent :score="10" />
     <RulesModalComponent />
   </div>
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import RulesModalComponent from "./RulesModalComponent.vue";
-export default defineComponent({
-  name: "GameChallenge",
-  prop: {},
-  components: {
-    RulesModalComponent,
-  },
-});
+import GameScoreComponent from "./GameScoreComponent.vue";
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.base {
+  @media (min-width: 1366px) {
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    width: 80%;
+    height: 60%;
+  }
+
+  @media (max-width: 375px) {
+  }
+}
+</style>
